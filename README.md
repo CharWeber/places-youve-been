@@ -19,6 +19,17 @@ describe: Function passport();
 Test: Creates, object to hold (countries)
 code: Passport = Newpassport
 
+test: adds destinations to passport
+code: passport.addDestination(destination)
+
+test: Finds destinations in passport by ID
+code:Passport.findDestination(id)
+expected output: destination = [parameters]
+
+test: deletes destination in passport by id
+code:Passport.deleteDestination(id)
+expected outcome: true //deletes destination//
+
 describe: Function Destination
 
 test: creates object holding 4 variables

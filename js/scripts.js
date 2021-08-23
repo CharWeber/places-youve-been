@@ -31,12 +31,33 @@ Passport.prototype.deleteDestination = function(id) {
 
 function Destination(country, city, landmarks, season, notes){
 this.country = country
-  this.cities = city
+this.cities = [city]
 this.landmarks = landmarks
 this.season = season
 this.notes = notes
 }  
 
-// Destination.prototype.addCity(city) {
-//   this.cities.push(city);
-// };
+Destination.prototype.addCity = function(city) {
+  this.cities.push(city);
+};
+
+// User Interface Logic ---------
+let Passport = new Passport();
+
+function displayPassport(passportToDisplay) {
+}
+
+$(document).ready(function() {
+  $("form#").submit(function(event) {
+    event.preventDefault();
+    const country = $("input#").val();
+    const city = $("input#").val();
+    const landmarks = $("input#").val();
+    const season = $("input#").val();
+    const notes = $("input#").val();
+    const inputtedPassportNumber = $("input#").val();
+    let newDestination =  Destination(country, city, landmarks, season, notes);
+    Passport.addPassport(newPassport);
+    console.log(Passsport.city);
+  });
+});
